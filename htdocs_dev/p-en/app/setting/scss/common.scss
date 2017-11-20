@@ -385,6 +385,9 @@ body {
 		& + dd{
 			margin-top: 15px;
 		}
+		p + .disc_list{
+			margin-top: 15px;
+		}
 		.disc_list{
 			li + li{
 				margin-top: 15px;
