@@ -1,0 +1,440 @@
+@charset "UTF-8";
+
+/* --------------------------------------------------
+*
+	reset
+*
+-------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+button{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+	appearance: none;
+}
+
+
+/* --------------------------------------------------
+*
+	COMMON
+*
+-------------------------------------------------- */
+
+body {
+	height:  100%;
+	min-height: 100%;
+	font-size: 13px;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+	-webkit-text-size-adjust: none;
+	background-color: #eeeeee;
+	&.bg-white{
+		background-color: #ffffff;
+	}
+}
+
+.header_title {
+	font-size: 130%;
+	text-align: center;
+	padding: 12px 0;
+	border-bottom: 1px solid #bbbbbb;
+}
+
+.header_back {
+	position: relative;
+	background-color: #eeeeee;
+	padding: 12px 29px;
+}
+
+.header_back a{
+	color: #000000;
+	font-size: 110%;
+	text-decoration: none;
+}
+
+.header_back:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 8px;
+	height: 13px;
+	margin: auto;
+	background-image:  url(../images/arrow_back.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	top: 0;
+	bottom: 0;
+	left: 13px;
+}
+
+
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 36px;
+	text-align: left;
+	background-color: #eeeeee;
+	word-wrap: break-word;
+	&.no-bottom{
+		padding-bottom: 0;
+	}
+}
+
+.container.bg_gray{
+	background-color: #eeeeee;
+}
+
+/* --------------------------------------------------
+*
+	JS_STATE
+*
+-------------------------------------------------- */
+
+.is_hidden {
+	display: none;
+}
+
+/* --------------------------------------------------
+*
+	JS_LAYOUT
+*
+-------------------------------------------------- */
+
+.sg_accordion {
+	background: #ffffff;
+}
+
+.sg_accordion + .sg_accordion {
+	margin-top: 1px;
+}
+
+.sg_accordion:last-child {
+	border-bottom: none;
+}
+
+.sg_accordion_header {
+	font-size: 110%;
+	text-align: left;
+	padding: 16px 12px;
+	position:  relative;
+}
+
+.sg_accordion_header > p {
+	padding-right:25px; 
+	line-height: 1.6;
+}
+
+.sg_accordion_header.new > p:after {
+	content:  "";
+	width: 30px;
+	height: 15px;
+	display: inline-block;
+	background-image:  url(../images/new_icon.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin-left: 8px;
+}
+
+.sg_accordion_header.help_accordion {
+	padding-left: 47px;
+}
+
+.sg_accordion_header.help_accordion:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	margin: auto;
+	background-image:  url(../images/help_icn.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	top: 0;
+	bottom: 0;
+	left: 13px;
+}
+
+.sg_accordion_arrow {
+	position: absolute;
+	top: 0;
+	bottom:  0;
+	right: 16px;
+	margin:  auto;
+}
+
+.sg_accordion_arrow > img {
+	width:  16px;
+}
+
+.sg_accordion_content {
+	padding:  0px 13px 20px;
+	font-size: 100%;
+	color: #777777;
+	line-height: 1.8;
+}
+
+
+.desc {
+	line-height: 1.5;
+}
+.desc > dt {
+	color: #000000;
+	font-size: 100%;
+	margin-top: 30px;
+}
+
+.desc > dd {
+	margin-top: 10px;
+	color:  #777777;
+}
+
+.desc .txt_indent {
+	text-indent: -2em;
+	padding-left: 2em;
+}
+
+.desc > *:first-child {
+	margin-top: 0;
+}
+
+.txt_center {
+	text-align: center;
+}
+
+.sg_accordion_content dl.howto > dt {
+	color: #000000;
+	font-size: 110%;
+	margin-top: 20px;
+}
+
+.sg_accordion_content dl.howto > dd {
+	margin-top: 10px;
+}
+
+.sg_accordion_content dl.howto > .em_txt {
+	margin-top: 5px;
+	color: #000000;
+}
+
+.sg_accordion_content dl.howto > *:first-child {
+	margin-top: 0;
+}
+
+.sg_accordion_content p.txt_center {
+	margin-top: 50px;
+}
+
+.sg_accordion_content p.txt_center:last-child {
+	margin-bottom: 30px;
+}
+
+.sg_accordion_content .slick-list {
+	overflow: hidden;
+}
+
+.img-space {
+	margin-top: 15px;
+}
+
+.jsc_accordion_content_inr.slider_wrp {
+	position: relative;
+	margin-top: 15px;
+	padding: 0 60px 20px;
+}
+.prevBtn{
+	position: absolute;
+	top: 35%;
+	left: 5%;
+}
+.nextBtn{
+	position: absolute;
+	top: 35%;
+	right: 5%;
+}
+
+.slide-space{
+	display: inline-block;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+.slide-space img{
+	width: 100%;
+}
+
+.sg_accordion_content dl.info > dt + dd {
+	margin-top: 10px;
+}
+.sg_accordion_content .updt_img{
+	width: 100%;
+	margin: 5px 0 10px;
+}
+.sg_accordion_content .updt__list{
+	list-style-type: decimal;
+	margin-top: 15px;
+	padding-left: 5%;
+}
+.sg_accordion_content .updt__list__item{
+	margin-bottom: 30px;
+	ul {
+		li {
+			text-indent: -1em;
+			padding-left: 1em;
+		}
+	}
+	p {
+		margin: 5px 0 10px;
+	}
+}
+.sg_accordion_content .inquiry {
+	margin-top: 20px;
+	ul {
+		li {
+			text-indent: -5em;
+			padding-left: 5em;
+		}
+	}
+}
+.terms {
+	line-height: 1.5;
+	dt {
+		color: #000000;
+		font-size: 100%;
+		margin-top: 40px;
+	}
+	dd {
+		margin-top: 10px;
+		color:  #777777;
+	}
+}
+
+.terms .txt_indent {
+	text-indent: -2em;
+	padding-left: 2em;
+}
+
+.terms p.txt_indent {
+	text-indent: -3em;
+	padding-left: 3em;
+}
+
+.terms > *:first-child {
+	margin-top: 0;
+}
+
+.simple_desc{
+	background-color: #fff;
+	padding: 30px;
+	dl + dl {
+		margin-top: 30px;
+	}
+	dt {
+		font-size: 13px;
+		font-weight: bold;
+		line-height: 1.5;
+		margin-bottom: 15px;
+	}
+	dd {
+		font-size: 13px;
+		line-height: 1.5;
+		& + dd{
+			margin-top: 15px;
+		}
+		.disc_list{
+			li + li{
+				margin-top: 15px;
+			}
+		}
+	}
+}
+
+.disc_list{
+	list-style: disc;
+	padding-left: 1em;
+}
+
+
+
+/* --------------------------------------------------
+*
+	howto.html
+*
+-------------------------------------------------- */
+.howto_list_wrp {
+	padding: 0 10px;
+	box-sizing: border-box;
+	.howto_list_title {
+		font-size: 120%;
+		color: #000;
+		padding: 5% 0 5% 15%;
+		box-sizing: border-box;
+	}
+	.howto_list_title.howto_list_add {
+		background: url(/app/setting/images/howto/icon_serif_add.png) no-repeat center left;
+		background-size: 10%;
+	}
+	.howto_list_title.howto_list_edit {
+		background: url(/app/setting/images/howto/icon_serif_edit.png) no-repeat center left;
+		background-size: 10%;
+	}
+	ul.howto_list {
+		li.howto_list_item {
+			margin: 0 auto 15px;
+			p.howto_list_item_hdg {
+				font-size: 110%;
+				color: #000;
+				margin: 0 auto 5px;
+			}
+		}
+	}
+}
+
+
+
+
+

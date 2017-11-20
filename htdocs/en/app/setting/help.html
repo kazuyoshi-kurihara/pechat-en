@@ -9,6 +9,20 @@
 	<title>pechat</title>
 	<!-- 　css　 -->
 	<link rel="stylesheet" href="./css/common.css">
+
+	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(function(){
+			var ua = navigator.userAgent.toLowerCase();
+			var isiPhone = (ua.indexOf('iphone') > -1);
+			var isiPad = (ua.indexOf('ipad') > -1);
+			var isiPodTouch = (ua.indexOf('ipod touch') > -1);
+
+			if(isiPhone || isiPad || isiPodTouch === true){
+				$('.iphoneNone').hide();
+			}
+		});
+	</script>
 </head>
 
 <body>
@@ -17,7 +31,7 @@
 
 			<div class="jsc_accordion sg_accordion">
 				<div class="sg_accordion_header jsc_accordion_trigger help_accordion">
-					<p>ペチャットに接続できない。</p>
+					<p>Can't connect to Chappet?</p>
 					<button type="buttom" class="sg_accordion_arrow">
 						<img src="./images/arrow.png" width="13px" height="auto" alt="arrow">
 					</button>
@@ -25,46 +39,44 @@
 				<div class="jsc_accordion_content sg_accordion_content">
 					<dl class="desc">
 						<dt>
-							・ペチャットの電源は入っていますか？
+							・Is Chappet turned on?
 						</dt>
 						<dd>
-							ペチャット裏面のスイッチを３秒間長押しして電源を入れてください。
-							充電がきれている場合は、付属の充電ケーブルで充電してください。
+							Press and hold the power button on the backside of Chappet for three seconds to turn the power on. If Chappet is out of battery, please charge it using the provided charging cable.
 						</dd>
 
 						<dt>
-							・ペチャットから離れすぎていませんか？
+							・Are you close enough to Chappet?
 						</dt>
 						<dd>
-							ペチャットから10m以内（障害物がない状態）でご使用ください。
+							Make sure you are within 10 meters (without any obstacles) from Chappet.
 						</dd>
 
 						<dt>
-							・ペチャットが別のスマホに接続されていませんか？
+							・Is Chappet connected to another smartphone?
 						</dt>
 						<dd>
-							ペチャットに同時に接続できるスマホは１台だけです。
-							別のスマホとの接続を切ってから再度お試しください。
+							Chappet can only be connected to one smartphone at a time. Disconnect Chappet from the paired smartphone and try again.
 						</dd>
 
 						<dt>
-							・他のBluetoothデバイスに接続していませんか？
+							・Is your smartphone connected to other Bluetooth devices?
 						</dt>
 						<dd>
-							他のBluetoothデバイスとの接続を切ってからご使用ください。
+							Please disconnect other Bluetooth devices paired with your smartphone when using Chappet.
 						</dd>
 
 						<dt>
-							・電子レンジなど電磁波を発生するものが近くにありませんか？
+							・Are you near a microwave or other equipment that emits electromagnetic waves?
 						</dt>
 						<dd>
-							電磁波を発生するものから離れてご使用ください。
+							Please use Chappet away from equipment that emits electromagnectic waves.
 						</dd>
-						<dt>
-							・お使いのスマホ／タブレットはHFPに対応していますか？
+						<dt class="iphoneNone">
+							・Does your smartphone/tablet support HFP?
 						</dt>
-						<dd>
-							ペチャットは、HFPに対応していないスマホ／タブレットでは使用できません。
+						<dd class="iphoneNone">
+							Some features may not be used on smartphones/tablets that do not support HFP.
 						</dd>
 					</dl>
 				</div>
@@ -72,7 +84,7 @@
 
 			<div class="jsc_accordion sg_accordion">
 				<div class="sg_accordion_header jsc_accordion_trigger help_accordion">
-					<p>スマホのBluetoothデバイス選択画面に「Pechat」が見つからない。</p>
+					<p>"Chappet" doesn't show up on my smartphone Bluetooth device selection screen.</p>
 					<button type="buttom" class="sg_accordion_arrow">
 						<img src="./images/arrow.png" width="13px" height="auto" alt="arrow">
 					</button>
@@ -80,13 +92,13 @@
 				<div class="jsc_accordion_content sg_accordion_content">
 					<dl class="desc">
 						<dt>
-							以下を試してください。
+							Please try the following.
 						</dt>
 						<dd>
-							・スマホの 「設定」を開き、一度Bluetoothをオフにして、再度オンにする。
+							・Open smartphone "Settings." Disable Bluetooth and then try turning it on again.
 						</dd>
 						<dd>
-							・ペチャット本体の電源を一度切ってから、再度起動する。
+							・Turn off the Chappet device and try turning it on again.
 						</dd>
 					 </dl>
 				</div>
@@ -94,7 +106,7 @@
 
 			<div class="jsc_accordion sg_accordion">
 				<div class="sg_accordion_header jsc_accordion_trigger help_accordion">
-					<p>ペチャットの電源が入らない。</p>
+					<p>Chappet can't be turned on.</p>
 					<button type="buttom" class="sg_accordion_arrow">
 						<img src="./images/arrow.png" width="13px" height="auto" alt="arrow">
 					</button>
@@ -102,34 +114,26 @@
 				<div class="jsc_accordion_content sg_accordion_content">
 					<dl class="desc">
 						<dt>
-							・スイッチを３秒間長押ししてください。
+							・Press and hold the power button for three seconds.
 						</dt>
 						<dd>
-							ペチャットの裏面にあるスイッチを3秒間長押しすると電源が入ります。
+							Press and hold the power button at the backside of Chappet for three seconds to turn on the power.
 						</dd>
 
 						<dt>
-							・ペチャットの充電が切れていませんか？
+							・Is Chappet charged?
 						</dt>
 						<dd>
-							ペチャットを付属の充電ケーブルで充電してください。
+							Please charge Chappet using the provided charging cable.
 						</dd>
 
-						<dt>
-							・ペチャットの故障の可能性があります。
-						</dt>
-						<dd>
-							ペチャットお客様相談室にお問い合わせください。<br>
-							　電話：0120-663-167<br>
-							　受付時間：10:00〜17:00（土・日・祝日・年末年始を除く）
-						</dd>
 					 </dl>
 				</div>
 			</div>
 
 			<div class="jsc_accordion sg_accordion">
 				<div class="sg_accordion_header jsc_accordion_trigger help_accordion">
-					<p>アプリがすぐに落ちる。</p>
+					<p>The app keeps terminating abnormally.</p>
 					<button type="buttom" class="sg_accordion_arrow">
 						<img src="./images/arrow.png" width="13px" height="auto" alt="arrow">
 					</button>
@@ -137,9 +141,7 @@
 				<div class="jsc_accordion_content sg_accordion_content">
 					<dl class="desc">
 						<dd>
-							スマホ本体のメモリ不足の可能性があります。
-							立ち上げている他のアプリを閉じるか、スマホを再起動すると改善する場合があります。
-							操作方法については、各メーカーの取扱説明書などをご参照ください。
+							The problem may be due to insufficient memory on your smartphone. Please close other apps that are running or restart your smartphone and see if there is an improvement. Refer to your smartphone manual for operating instructions. 
 						</dd>
 					 </dl>
 				</div>
@@ -147,7 +149,7 @@
 
 			<div class="jsc_accordion sg_accordion">
 				<div class="sg_accordion_header jsc_accordion_trigger help_accordion">
-					<p>音量を大きくしたい。</p>
+					<p>I want to turn up the volume.</p>
 					<button type="buttom" class="sg_accordion_arrow">
 						<img src="./images/arrow.png" width="13px" height="auto" alt="arrow">
 					</button>
@@ -155,7 +157,7 @@
 				<div class="jsc_accordion_content sg_accordion_content">
 					<dl class="desc">
 						<dd>
-							スマホの音量ボタン、もしくはメニュー下部にある音量バーで調整してください。
+							Adjust the volume by using your smartphone's volume button or by using the volume bar at the lower section of the menu. Please note that audio may crack when output in maximum volume. Keep ample distance from your (or your child's) ear.
 						</dd>
 					 </dl>
 				</div>
@@ -163,7 +165,7 @@
 
 			<div class="jsc_accordion sg_accordion">
 				<div class="sg_accordion_header jsc_accordion_trigger help_accordion">
-					<p>ペチャットの音声にノイズが乗る。</p>
+					<p>There's noise in Chappet's audio.</p>
 					<button type="buttom" class="sg_accordion_arrow">
 						<img src="./images/arrow.png" width="13px" height="auto" alt="arrow">
 					</button>
@@ -171,7 +173,7 @@
 				<div class="jsc_accordion_content sg_accordion_content">
 					<dl class="desc">
 						<dd>
-							無線、無線LAN、ペチャット以外のBluetoothオーディオ機器または電子レンジなど、電磁波を発生する機器はペチャットの接続に障害を起こし、音声にノイズが乗ることがあります。ペチャットを上記の機器から離れた場所でご使用ください。
+							Devices including wireless/wireless LAN/Bluetooth devices other than Chappet, microwaves, etc., obstruct connection with Chappet and may cause noise in audio. Please use Chappet away from such devices.
 						</dd>
 					 </dl>
 				</div>
@@ -179,7 +181,7 @@
 
 			<div class="jsc_accordion sg_accordion">
 				<div class="sg_accordion_header jsc_accordion_trigger help_accordion">
-					<p>ペチャットを使用中に変な連続音が再生される。</p>
+					<p>I hear a strange continous sound while using Chappet.</p>
 					<button type="buttom" class="sg_accordion_arrow">
 						<img src="./images/arrow.png" width="13px" height="auto" alt="arrow">
 					</button>
@@ -187,14 +189,14 @@
 				<div class="jsc_accordion_content sg_accordion_content">
 					<dl class="desc">
 						<dd>
-							ペチャットアプリにエラーが起きている可能性があります。アプリを立ち上げ直しても改善しない場合は、スマホを再起動してください。
+							It may be an error of the Chappet app. If the problem persists after restarting the app, please try restarting your smartphone.
 						</dd>
 					 </dl>
 				</div>
 			</div>
 			<div class="jsc_accordion sg_accordion">
 				<div class="sg_accordion_header jsc_accordion_trigger help_accordion">
-					<p>１台のスマホから複数のペチャットを操作したい。</p>
+					<p>I want to operate multiple Chappet devices from my smartphone.</p>
 					<button type="buttom" class="sg_accordion_arrow">
 						<img src="./images/arrow.png" width="13px" height="auto" alt="arrow">
 					</button>
@@ -202,24 +204,7 @@
 				<div class="jsc_accordion_content sg_accordion_content">
 					<dl class="desc">
 						<dd>
-							1台のスマホで同時にコントロールできるペチャットはひとつのみです。
-						</dd>
-					 </dl>
-				</div>
-			</div>
-
-			<div class="jsc_accordion sg_accordion">
-				<div class="sg_accordion_header jsc_accordion_trigger help_accordion">
-					<p>複数のスマホから１台のペチャットを操作したい。</p>
-					<button type="buttom" class="sg_accordion_arrow">
-						<img src="./images/arrow.png" width="13px" height="auto" alt="arrow">
-					</button>
-				</div>
-				<div class="jsc_accordion_content sg_accordion_content">
-					<dl class="desc">
-						<dd>
-							1台のペチャットを複数のスマホから同時に操作することはできません。
-							ペチャットを操作するスマホを変える場合には、現在接続しているスマホの接続を切ってから、改めて使用したいスマホと接続をしてください。
+							Only one Chappet can be controlled at one time from one smartphone.
 						</dd>
 					 </dl>
 				</div>
@@ -227,7 +212,7 @@
 
 			<div class="jsc_accordion sg_accordion">
 				<div class="sg_accordion_header jsc_accordion_trigger help_accordion">
-					<p>スマホの機種変更をする際に、データを引き継ぎたい。</p>
+					<p>I want to operate one Chappet device from multiple smartphones.</p>
 					<button type="buttom" class="sg_accordion_arrow">
 						<img src="./images/arrow.png" width="13px" height="auto" alt="arrow">
 					</button>
@@ -235,7 +220,7 @@
 				<div class="jsc_accordion_content sg_accordion_content">
 					<dl class="desc">
 						<dd>
-							データを引き継ぐことはできません。ご了承ください。
+							One Chappet device cannot be operated from multiple smartphones at once. To switch the Chappet-operating smartphone, disconnect the smartphone currently paired with Chappet and reconnect to Chappet from another smartphone.
 						</dd>
 					 </dl>
 				</div>
@@ -243,7 +228,7 @@
 
 			<div class="jsc_accordion sg_accordion">
 				<div class="sg_accordion_header jsc_accordion_trigger help_accordion">
-					<p>故障・修理について</p>
+					<p>I'm changing my smartphone and want to transfer Chappet data to my new phone.</p>
 					<button type="buttom" class="sg_accordion_arrow">
 						<img src="./images/arrow.png" width="13px" height="auto" alt="arrow">
 					</button>
@@ -251,9 +236,7 @@
 				<div class="jsc_accordion_content sg_accordion_content">
 					<dl class="desc">
 						<dd>
-							ペチャットお客様相談室にお問い合わせください。<br>
-							　電話：0120-663-167<br>
-							　受付時間：10:00〜17:00（土・日・祝日・年末年始を除く）
+							Data cannot be transferred. We apologize for the inconvenience.
 						</dd>
 					 </dl>
 				</div>
