@@ -15,6 +15,94 @@
 		<main>
 
 			<div class="jsc_accordion sg_accordion">
+				<div class="sg_accordion_header jsc_accordion_trigger jsc_check_upload_target" data-upload-target="contest_date">
+					<p>ペチャットに英語版アプリが登場！</p>
+					<button type="buttom" class="sg_accordion_arrow">
+						<img src="./images/arrow.png" width="13px" height="auto" alt="arrow">
+					</button>
+				</div>
+				<div class="jsc_accordion_content sg_accordion_content">
+					<dl class="terms">
+						<dt>
+							2017.12.7
+						</dt>
+						<dd>
+							いつもペチャットをご利用いただき、ありがとうございます。<br>
+							本日、ペチャットを使って英語に楽しく触れられる「ペチャット英語」アプリをリリースしましたのでお知らせいたします。
+						</dd>
+						<dd>
+							<img class="updt_img" src="./images/info/update_171207.png" alt="">
+						</dd>
+						<dd>
+							＜「ペチャット英語」アプリについて＞
+						</dd>
+						<dd>
+							日常の様々なシーンで使える1,000以上の英語のフレーズや、日本でもなじみのある英語の歌20曲、英語のお話を20話収録。<br>
+							全てのフレーズに日本語訳を併記している為、英語が苦手な方でも気軽にご利用できます。<br>
+							また、「ペチャット英語」と一緒に楽しめる絵本「My First English 〜はじめてのえいごずかん」を特設サイトから無料でダウンロードできます。<br>
+							絵本に描かれているイラストを見ながら、英単語を聞いたり、発音をまねたり、楽しく英語に触れることができます。
+						</dd>
+						<dd>
+							詳細は下記URLをご覧ください。<br>
+							<a href="https://pechat.jp/english/">http://pechat.jp/english/</a>
+						</dd>
+						<dd class="app_dwn">
+							「ペチャット英語」アプリのダウンロードはこちらから
+							<div class="horizon_img">
+								<a href="https://itunes.apple.com/jp/app/id1315812829">
+									<img src="./images/info/app_store.png" alt="" width="auto" height="40px">
+								</a>
+								<a href="https://play.google.com/store/apps/details?id=jp.pechat.english.android">
+									<img src="./images/info/google_play.png" alt="" width="auto" height="40px">
+								</a>
+							</div>
+						</dd>
+						<dd>
+							ペチャットは、これからも楽しく使いやすいアプリを目指してアップデートを行って参ります。<br>
+							今後ともペチャットをどうぞよろしくお願いいたします。
+						</dd>
+						<dd class="inquiry">
+							<ul>
+								<li>メール　：info@pechat.jp</li>
+								<li>電話　　：0120-663-167</li>
+								<li>住所　　：東京都江東区豊洲5-6-15NBF豊洲ガーデンフロント2F</li>
+								<li>受付時間：10:00～17:00 (土・日・祝日・年末年始除く)</li>
+							</ul>
+						</dd>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 							<a href="https://pechat.jp/english/">https://pechat.jp/english/</a>
+
+							<div class="horizon_img">
+								<a href="https://itunes.apple.com/jp/app/id1315812829" style="text-decoration: none;">
+									<img src="./images/info/app_store.png" alt="" width="auto" height="40px">
+								</a>
+								<a href="https://play.google.com/store/apps/details?id=jp.pechat.english.android" style="text-decoration: none;">
+									<img src="./images/info/google_play.png" alt="" width="auto" height="41.5px">
+								</a>
+							</div>
+
+						</dd>
+ -->
+
+					</dl>
+				</div>
+			</div>
+
+
+			<div class="jsc_accordion sg_accordion">
 				<div class="sg_accordion_header jsc_accordion_trigger jsc_check_upload_target" data-upload-target="bug01_date">
 					<p>【重要なお知らせ】iPhone Xにおける不具合について</p>
 					<button type="buttom" class="sg_accordion_arrow">
@@ -254,6 +342,20 @@
 
 	<script src="./js/jquery-3.1.1.min.js"></script>
 	<script src="./js/common.js"></script>
+	<script>
+		$(function(){
+			var ua = navigator.userAgent.toLowerCase();
+			var isiPhone = (ua.indexOf('iphone') > -1);
+			var isiPad = (ua.indexOf('ipad') > -1);
+			var isiPodTouch = (ua.indexOf('ipod touch') > -1);
+
+			if(isiPhone || isiPad || isiPodTouch === true){
+				$('.AndroidImg').hide();
+			} else {
+				$('.iosImg').hide();
+			}
+		});
+	</script>
 
 </body>
 </html>

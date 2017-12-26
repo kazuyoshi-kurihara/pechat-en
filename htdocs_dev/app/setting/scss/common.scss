@@ -308,6 +308,20 @@ body {
 	width: 100%;
 	margin: 5px 0 10px;
 }
+
+.sg_accordion_content .horizon_img{
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+	a{
+		display: block;
+		text-decoration: none;
+	}
+	a + a{
+		margin-left: 10px;
+	}
+}
+
 .sg_accordion_content .updt__list{
 	list-style-type: decimal;
 	margin-top: 15px;
