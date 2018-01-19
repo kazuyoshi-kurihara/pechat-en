@@ -111,7 +111,8 @@ COMMON.CheckUpload.prototype = {
 						'update_date',
 						'contest_date',
 						'bug01_date',
-						'update01_date'
+						'update01_date',
+						'info_date_1'
 				]
 			} ,
 		]
@@ -125,7 +126,8 @@ COMMON.CheckUpload.prototype = {
 				'update_date' : [],
 				'contest_date' : [],
 				'bug01_date' : [],
-				'update01_date' : []
+				'update01_date' : [],
+				'info_date_1' : []
 			}
 		}
 
@@ -138,7 +140,8 @@ COMMON.CheckUpload.prototype = {
 				'update_date' : [],
 				'contest_date' : [],
 				'bug01_date' : [],
-				'update01_date' : []
+				'update01_date' : [],
+				'info_date_1' : []
 			}
 		}
 	},
